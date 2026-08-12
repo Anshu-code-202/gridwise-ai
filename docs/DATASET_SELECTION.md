@@ -151,15 +151,21 @@ The selected dataset will then be documented with its source, limitations, and i
 
 ## 6. Selected Dataset
 
-**Status: Pending evaluation**
+**Selected dataset:** SmartMeter Energy Consumption Data in London Households
 
-The final dataset will be selected after comparing the candidate datasets using the criteria above.
+**Source:** London Datastore / UK Power Networks
 
-**Selected dataset:** London dataset and document the evidence.
+**Coverage:** November 2011 – February 2014
 
-**Source:** TBD
+**Resolution:** 30 minutes
 
-**Date selected:** TBD
+**Households:** 5,567
+
+**Approximate observations:** 167 million
+
+**License:** Creative Commons Attribution
+
+**Date selected:** 2026-08-12
 
 ---
 
@@ -255,8 +261,34 @@ This would allow the system to evolve from basic demand forecasting toward susta
 
 ## 11. Decision
 
-**Decision: Pending**
 
-The dataset will be selected after completing the candidate evaluation.
+**Decision: Selected — London Smart Meter Energy Consumption Dataset**
 
-The selection decision will be recorded in this document and, if the decision has significant architectural consequences, may also be recorded as a separate Architecture Decision Record.
+We selected the SmartMeter Energy Consumption Data in London
+Households dataset as the primary dataset for GridWise AI.
+
+The dataset contains half-hourly electricity consumption measurements
+from 5,567 London households covering November 2011 to February 2014.
+
+The dataset was selected because it provides:
+
+- Large-scale real-world smart-meter data
+- Fine-grained time-series observations
+- Sufficient temporal coverage for forecasting
+- Strong suitability for lag and rolling-window features
+- Strong suitability for XGBoost and future LSTM experiments
+- A clear connection to demand-response and grid-stress problems
+- A publicly documented source and Creative Commons Attribution license
+
+The dataset also has direct relevance to sustainability because the
+original Low Carbon London project included Dynamic Time-of-Use
+pricing experiments designed to investigate demand management,
+including reducing stress on local distribution grids and supporting
+high renewable-generation scenarios.
+
+Weather data will be treated as an external dataset and integrated
+during a later ETL stage.
+
+The raw dataset will not be committed to GitHub. Only reproducible
+download instructions, metadata, schemas, and processing code will
+be maintained in the repository.
